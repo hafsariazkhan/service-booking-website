@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2>ServiceBooking</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Book a Service</h1>
+
+  <div class="card">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+
+    <select id="service">
+      <option value="">Select Service</option>
+      <option>Web Development</option>
+      <option>Graphic Design</option>
+      <option>Online Tutoring</option>
+    </select>
+
+    <input type="date" id="date">
+    <button onclick="saveBooking()">Submit Booking</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

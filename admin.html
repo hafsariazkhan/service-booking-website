@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2>Admin Panel</h2>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Bookings</h1>
+  <div id="bookingList"></div>
+</div>
+
+<script>
+let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+let list = document.getElementById("bookingList");
+
+bookings.forEach((b, i) => {
+  list.innerHTML += `
+    <div class="card">
+      <p><b>Name:</b> ${b.name}</p>
+      <p><b>Email:</b> ${b.email}</p>
+      <p><b>Service:</b> ${b.service}</p>
+      <p><b>Date:</b> ${b.date}</p>
+      <button onclick="deleteBooking(${i})">Delete</button>
+    </div>
+  `;
+});
+
+function deleteBooking(index) {
+  bookings.splice(index, 1);
+  localStorage.setItem("bookings", JSON.stringify(bookings));
+  location.reload();
+}
+</script>
+
+</body>
+</html>
