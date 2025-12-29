@@ -17,7 +17,7 @@ This is a responsive and beginner-friendly online service booking website built 
 - LocalStorage (Browser)
 
 ## 🌍 Live Website
-https://iazkhank.github.io/service-booking-website/
+https://hafsariazkhan.github.io/service-booking-website/
 
 ## 📂 Project Structure
 service-booking-website │── index.html │── services.html │── book.html │── contact.html │── admin.html │── style.css │── script.js
